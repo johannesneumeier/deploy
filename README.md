@@ -13,12 +13,16 @@ The script remembers the two scp "root folders" and you can deploy the whole fol
 
 - Setup deploy to use source folder ~/foo/bar/ and destination folder host:/var/www/foo/bar/ (calling ./deploy.sh will automatically prompt to setup a configuration file)
 - Deploy the whole content of ~/foo/bar/: 
+
     $user: ./deploy.sh
 - Deploy the whole content of subfolder "~/foo/bar/goo/": 
+
     $user: ./deploy.sh goo/*
 - Deploy the file "~/foo/bar/goo/foobar.txt": 
+
     $user: ./deploy.sh goo/foobar.txt
 - Reverse the direction, get the file "host:/var/www/foo/goo/barfoo.txt":
+
     $user: ./deploy.sh -r goo/barfoo.txt
 
 
