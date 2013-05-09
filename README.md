@@ -11,19 +11,23 @@ The script remembers the two scp "root folders" and you can deploy the whole fol
 
 ## Example usage:
 
-- Setup deploy to use source folder ~/foo/bar/ and destination folder host:/var/www/foo/bar/ (calling ./deploy.sh will automatically prompt to setup a configuration file)
-- Deploy the whole content of ~/foo/bar/: 
+Setup deploy to use source folder ~/foo/bar/ and destination folder host:/var/www/foo/bar/ (calling ./deploy.sh will automatically prompt to setup a configuration file)
 
-    $user: ./deploy.sh
-- Deploy the whole content of subfolder "~/foo/bar/goo/": 
+* Deploy the whole content of ~/foo/bar/:
 
-    $user: ./deploy.sh goo/*
-- Deploy the file "~/foo/bar/goo/foobar.txt": 
+        $user: ./deploy.sh
+    
+* Deploy the whole content of subfolder "~/foo/bar/goo/": 
 
-    $user: ./deploy.sh goo/foobar.txt
-- Reverse the direction, get the file "host:/var/www/foo/goo/barfoo.txt":
+        $user: ./deploy.sh goo/*    
+    
+* Deploy the file "~/foo/bar/goo/foobar.txt": 
 
-    $user: ./deploy.sh -r goo/barfoo.txt
+        $user: ./deploy.sh goo/foobar.txt
+    
+* Reverse the direction, get the file "host:/var/www/foo/goo/barfoo.txt":
+
+        $user: ./deploy.sh -r goo/barfoo.txt
 
 
 ## Parameters:
@@ -34,8 +38,10 @@ The script remembers the two scp "root folders" and you can deploy the whole fol
 
 ### Notes:
 
-- You might have to make the script executable first by typeing:
-    chmod +x deploy.sh
+- You might have to make the script executable first by typeing: 
+        
+        $user: chmod +x deploy.sh
+
 - The script always copies recursively
 - You can't copy to folders that don't exist
 - Use at your own risk
